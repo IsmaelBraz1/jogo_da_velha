@@ -22,6 +22,7 @@ main()
     scanf(" %s", user2);
     setbuf(stdin, 0);
 
+    //Sorteio para definir qual jogador comeca primeiro
     srand(time(NULL));
     sorteio = (rand() % 2);
     if(sorteio == 0){
@@ -62,8 +63,7 @@ main()
             }
 
             
-            do
-            {
+            do{
                 printf("Digite a linha: ");
                 scanf("%d", &i);
                 setbuf(stdin, 0);
@@ -83,7 +83,7 @@ main()
                         controle = 0;
                         system("cls");
                     }else{
-                        printf("\nessa posicao ja foi preenchida.\n");
+                        printf("\nEsta posicao ja foi preenchida.\n");
                         controle = 1;
                     }
                 }else{
@@ -94,7 +94,7 @@ main()
                         system("cls");
                         
                     }else{
-                        printf("\nessa posicao ja foi preenchida.\n");
+                        printf("\nEsta posicao ja foi preenchida.\n");
                         controle = 1;
                     }
                     
@@ -158,7 +158,7 @@ main()
 		//verifica se houve empate        
         if(cont == 9){ 
             print_tabela(jogo);
-            printf("\nO jogo empatou.\n");
+            printf("\nFIM DE JOGO, EMPATE.\n");
             do{
                 printf("\nJogar novamente? (S/N): ");
                 scanf("%c", &reiniciar);
