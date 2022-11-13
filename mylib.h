@@ -45,8 +45,6 @@ int reset(char reiniciar, int cont){
                 default:
                     cont = 99;
                     printf("Opcao invalida. \n"); 
-                    
-                    
             }
             return(cont);
 }
