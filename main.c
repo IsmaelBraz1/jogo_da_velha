@@ -13,7 +13,7 @@ main()
     char user1[15], user2[15];
     char primeiro[15], segundo[15];
     char reiniciar;
-    
+    int pont1 = 0, pont2 =0;
     cleanmtrz(jogo);//function para limpar a matriz
     printf("Digite o nome do primeiro jogador: ");
     scanf(" %s", user1);
@@ -52,7 +52,7 @@ main()
     for ( cont = 0; cont < 9; )
     {
         cont++;
-        print_tabela(jogo);//function que imprime o tabela do jogo
+        print_tabela(jogo, primeiro,pont1,pont2,segundo);;//function que imprime o tabela do jogo
         
         if(cont != 11){
             do{
@@ -119,7 +119,8 @@ main()
             ((jogo[0][2] == 'X') && (jogo[1][1] == 'X') && (jogo[2][0] == 'X'))
             )
             {
-                print_tabela(jogo);
+                pont1++;
+                print_tabela(jogo, primeiro,pont1,pont2,segundo);
                 printf("\nFIM DE JOGO.\n%s VENCEU!!\n\n", primeiro);
                 do{
                 printf("\nJogar novamente? (S/N): ");
@@ -143,7 +144,8 @@ main()
             ((jogo[0][2] == 'O') && (jogo[1][1] == 'O') && (jogo[2][0] == 'O'))
             )
             {  
-                print_tabela(jogo);
+                pont2++;
+                print_tabela(jogo, primeiro,pont1,pont2,segundo);
                 printf("\nFIM DE JOGO.\n%s VENCEU!!\n\n", segundo);
                 do{
                 printf("\nJogar novamente? (S/N): ");
@@ -157,7 +159,7 @@ main()
         }   
 		//verifica se houve empate        
         if(cont == 9){ 
-            print_tabela(jogo);
+            print_tabela(jogo, primeiro,pont1,pont2,segundo);
             printf("\nFIM DE JOGO, EMPATE.\n");
             do{
                 printf("\nJogar novamente? (S/N): ");

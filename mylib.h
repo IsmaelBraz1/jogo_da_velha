@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 //function que imprime o tabela do jogo
-char print_tabela(char jogo[3][3]){
+char print_tabela(char jogo[3][3], char primeiro[15], int pont1, int pont2, char segundo[15]){
         printf("        1     2     3 \n\n");
         printf("1       %c  |  %c  |  %c   \n", jogo[0][0], jogo[0][1], jogo[0][2]);      
         printf("      ------------------\n");
-        printf("2       %c  |  %c  |  %c   \n", jogo[1][0], jogo[1][1], jogo[1][2]);
+        printf("2       %c  |  %c  |  %c            |%s %d x %d %s|\n", jogo[1][0], jogo[1][1], jogo[1][2], primeiro, pont1, pont2, segundo);
         printf("      ------------------\n");
         printf("3       %c  |  %c  |  %c   \n", jogo[2][0], jogo[2][1], jogo[2][2]);
 }
