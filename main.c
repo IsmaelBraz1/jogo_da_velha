@@ -95,7 +95,7 @@ main()
                         }
                     } while (controle == 1);
                 }
-                
+
                 if (cont > 4)
                 {
                     vencedor = resultado(jogo);
